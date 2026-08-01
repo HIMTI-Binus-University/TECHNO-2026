@@ -151,7 +151,7 @@ function EventsPage() {
             type="button"
             className="mt-5 w-full rounded-[10px] border border-white/70 bg-bg-panel py-3 text-center font-display text-sm font-bold tracking-[0.1em] text-white transition-colors hover:border-gold hover:text-gold md:text-base"
           >
-            Keterangan EXPO
+            Keterangan EXPO 123
           </button>
         </section>
       </div>
