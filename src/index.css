@@ -1,0 +1,74 @@
+@import 'tailwindcss';
+
+@theme {
+  /* --- Palette (sampled from Techno brand mockup) --- */
+  --color-bg: #021936;
+  --color-bg-deep: #010e21;
+  --color-bg-panel: #0a2547;
+
+  --color-line: #3f5169;
+  --color-line-soft: #4e627d;
+
+  --color-gold: #e0b93f;
+  --color-gold-dim: #8a7530;
+
+  --color-paper: #a9bbcf;
+  --color-paper-ink: #0c1f3c;
+  --color-paper-ink-soft: #3a4c66;
+
+  --color-text: #eef1f5;
+  --color-text-muted: #9aa9bd;
+
+  --font-display: 'Chivo Mono', monospace;
+  --font-mono: 'Chivo Mono', ui-monospace, monospace;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @apply bg-bg text-text font-mono min-h-svh antialiased;
+  background-image:
+    radial-gradient(circle at 12% 0%, rgb(224 185 63 / 0.06), transparent 40%),
+    radial-gradient(circle at 88% 15%, rgb(78 140 160 / 0.08), transparent 45%);
+}
+
+#root {
+  @apply flex flex-col min-h-svh;
+}
+
+h1,
+h2,
+h3 {
+  @apply font-display m-0 tracking-wide text-text;
+}
+
+p {
+  @apply m-0;
+}
+
+button {
+  font-family: inherit;
+}
+
+:focus-visible {
+  @apply outline-2 outline-gold outline-offset-[3px];
+}
+
+::selection {
+  @apply bg-gold text-paper-ink;
+}
+
+@keyframes faq-fade {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
