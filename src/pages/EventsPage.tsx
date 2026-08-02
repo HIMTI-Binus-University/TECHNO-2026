@@ -1,58 +1,36 @@
 import { useState } from 'react'
 import { expoSlides } from '../data/events'
 
-const stripeStyle = {
-  background: 'repeating-linear-gradient(115deg, var(--color-gold) 0 3px, transparent 3px 9px)',
-}
-
 function SectionHeading({ label }: { label: string }) {
   return (
-    <div className="mb-6 flex items-center justify-center gap-3 md:gap-4">
-      <span className="h-1.5 w-1.5 shrink-0 rounded-full border border-gold" />
-      <span className="h-2.5 w-14 shrink-0 md:w-24" style={stripeStyle} />
+    <div className="mb-5 flex items-center justify-center gap-3 md:gap-4">
+      <img 
+        src="/src/assets/diamond-shape.svg" alt="Diamond" 
+        className="h-2 w-3 shrink-0 object-contain"
+      />
+      <img 
+        src="/src/assets/stripe.svg" alt="Stripe-Left"
+        className="w-14 h-[39.5px]"
+        style={{
+            transform: "scaleX(-1)",
+            opacity: 1,
+        }}
+      />
       <h2 className="whitespace-nowrap font-display text-base font-normal tracking-[0.35em] text-gold md:text-2xl">
         {label}
       </h2>
-      <span className="h-2.5 w-14 shrink-0 md:w-24" style={stripeStyle} />
-      <span className="h-1.5 w-1.5 shrink-0 rounded-full border border-gold" />
+      <img 
+        src="/src/assets/stripe.svg" alt="Stripe-Right" 
+        className="w-14 h-[39.5px]"
+        style={{
+            opacity: 1,
+        }}
+      />
+      <img 
+        src="/src/assets/diamond-shape.svg" alt="Diamond" 
+        className="h-2 w-3 shrink-0 object-contain"
+      />
     </div>
-  )
-}
-
-function GamepadIcon() {
-  return (
-    <svg
-      viewBox="0 0 48 32"
-      className="h-10 w-14 md:h-12 md:w-16"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M14 6h20a12 12 0 0 1 12 12v2a8 8 0 0 1-14.4 4.8L29 22h-10l-2.6 2.8A8 8 0 0 1 2 20v-2A12 12 0 0 1 14 6Z" />
-      <path d="M11 15v6M8 18h6" />
-      <circle cx="34" cy="14" r="1.3" fill="currentColor" stroke="none" />
-      <circle cx="38" cy="18" r="1.3" fill="currentColor" stroke="none" />
-    </svg>
-  )
-}
-
-function MicIcon() {
-  return (
-    <svg
-      viewBox="0 0 32 40"
-      className="h-10 w-8 md:h-12 md:w-10"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <rect x="11" y="2" width="10" height="20" rx="5" />
-      <path d="M6 18a10 10 0 0 0 20 0" />
-      <path d="M16 28v6M11 34h10" />
-    </svg>
   )
 }
 
@@ -66,7 +44,7 @@ function EventsPage() {
 
   return (
     <main className="flex-1 px-5 pb-20 pt-6 md:px-16">
-      <div className="mx-auto flex max-w-[1000px] flex-col gap-14">
+      <div className="mx-auto flex max-w-[1000px] flex-col gap-8">
         {/* EVENTS */}
         <section>
           <SectionHeading label="EVENTS" />
@@ -79,60 +57,86 @@ function EventsPage() {
           </div>
         </section>
 
+        <hr className="border-t border-white w-full"/>
+
         {/* MAIN SHOW */}
         <section>
           <SectionHeading label="MAIN SHOW" />
-
-          <div className="flex min-h-[140px] items-center justify-center rounded-[10px] border border-white/70 bg-bg-panel px-6 py-10 md:min-h-[170px]">
+          <div className="flex min-h-[140px] items-top justify-center rounded-[10px] border border-white/70 bg-bg-panel px-6 py-3 md:min-h-[170px]">
             <p className="font-display text-lg font-bold tracking-[0.15em] text-white md:text-2xl">GUEST STAR</p>
           </div>
 
           <div className="mt-5 grid grid-cols-2 gap-4 md:gap-5">
-            <div className="flex aspect-square flex-col items-center justify-center gap-4 rounded-[10px] border border-white/70 bg-bg-panel px-4 py-6">
-              <p className="font-display text-sm font-bold tracking-[0.15em] text-white md:text-base">GAMES</p>
-              <span className="text-text-muted">
-                <GamepadIcon />
+            <div className="flex aspect-square flex-col items-center justify-between rounded-[10px] border border-white/70 bg-bg-panel px-4 py-3">
+              <p className="font-display text-lg font-bold tracking-[0.15em] text-white md:text-2xl">GAMES</p>
+              <span className="my-auto">
+                <img 
+                  src="/src/assets/game-icon.svg" alt="Game" 
+                  className="w-20 h-auto object-contain md:w-70"
+                />
               </span>
             </div>
-            <div className="flex aspect-square flex-col items-center justify-center gap-4 rounded-[10px] border border-white/70 bg-bg-panel px-4 py-6">
-              <p className="font-display text-sm font-bold tracking-[0.15em] text-white md:text-base">TALK SHOW</p>
-              <span className="text-gold">
-                <MicIcon />
+            <div className="flex aspect-square flex-col items-center justify-between rounded-[10px] border border-white/70 bg-bg-panel px-4 py-3">
+              <p className="font-display text-lg font-bold tracking-[0.15em] text-white md:text-2xl">TALK SHOW</p>
+              <span className="my-auto">
+                <img 
+                  src="/src/assets/mic-icon.svg" alt="Mic" 
+                  className="w-20 h-auto object-contain md:w-70"
+                />
               </span>
             </div>
           </div>
         </section>
 
+        <hr className="border-t border-white w-full"/>
+
         {/* EXPO */}
         <section>
           <SectionHeading label={`EXPO (${total})`} />
-
           <div className="relative">
             <button
               type="button"
               onClick={prevSlide}
               aria-label="Slide sebelumnya"
-              className="absolute left-0 top-1/2 z-10 flex h-9 w-9 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-gold bg-bg-deep text-lg text-gold transition-colors hover:bg-gold hover:text-bg-deep md:h-10 md:w-10"
+              className="absolute left-0 top-1/2 z-10 flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/70 bg-[#04244A] text-white transition-all hover:border-gold hover:text-gold sm:-left-8 sm:h-14 sm:w-14 md:-left-12 md:h-16 md:w-16 lg:-left-16 lg:h-20 lg:w-20"
             >
-              ‹
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 lg:h-10 lg:w-10">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+              </svg>
             </button>
 
             <div
               key={current.id}
-              className="flex min-h-[160px] animate-[faq-fade_0.25s_ease] flex-col items-center justify-center gap-2 rounded-[10px] border border-white/70 bg-bg-panel px-6 py-10 text-center md:min-h-[200px]"
+              className="flex aspect-[16/9] w-full items-center justify-center overflow-hidden rounded-[10px] border border-white/70 bg-bg-panel animate-[faq-fade_0.25s_ease]"
             >
-              <p className="font-display text-base font-bold text-white md:text-lg">{current.title}</p>
-              <p className="max-w-md font-mono text-sm text-text-muted">{current.description}</p>
+              <img
+                src={current.image}
+                alt={current.title}
+                className="h-full w-full object-cover"
+              />
             </div>
 
             <button
               type="button"
               onClick={nextSlide}
               aria-label="Slide berikutnya"
-              className="absolute right-0 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 translate-x-1/2 items-center justify-center rounded-full border border-gold bg-bg-deep text-lg text-gold transition-colors hover:bg-gold hover:text-bg-deep md:h-10 md:w-10"
+              className="absolute right-0 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 translate-x-1/2 items-center justify-center rounded-full border border-white/70 bg-[#04244A] text-white transition-all hover:border-gold hover:text-gold sm:-right-8 sm:h-14 sm:w-14 md:-right-12 md:h-16 md:w-16 lg:-right-16 lg:h-20 lg:w-20"
             >
-              ›
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 lg:h-10 lg:w-10">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
             </button>
+          </div>
+
+          <div className="mt-3 flex flex-col items-center justify-center gap-1 rounded-[10px] border border-white/70 bg-bg-panel px-4 py-3 text-center">
+            <p className="font-display text-sm font-bold tracking-[0.1em] text-white md:text-base">
+              {current?.title || "Keterangan EXPO"}
+            </p>
+            {current.description && (
+              <p className="max-w-md font-mono text-xs text-text-muted md:text-sm">
+                {current.description}
+              </p>
+            )}
           </div>
 
           <div className="mt-4 flex items-center justify-center gap-2">
@@ -142,17 +146,12 @@ function EventsPage() {
                 type="button"
                 aria-label={`Ke slide ${i + 1}`}
                 onClick={() => setSlide(i)}
-                className={`h-2 w-2 rounded-full transition-colors ${i === slide ? 'bg-gold' : 'bg-line-soft'}`}
+                className={`h-2 w-2 rounded-full transition-all ${
+                  i === slide ? 'w-4 bg-[#05EEF6]' : 'bg-white/30'
+                }`}
               />
             ))}
           </div>
-
-          <button
-            type="button"
-            className="mt-5 w-full rounded-[10px] border border-white/70 bg-bg-panel py-3 text-center font-display text-sm font-bold tracking-[0.1em] text-white transition-colors hover:border-gold hover:text-gold md:text-base"
-          >
-            Keterangan EXPO 123
-          </button>
         </section>
       </div>
     </main>

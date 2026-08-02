@@ -2,23 +2,26 @@ export interface ExpoSlide {
   id: string
   title: string
   description: string
+  image?: string
 }
 
-// Ganti judul/deskripsi tiap slide sesuai booth/expo yang sebenarnya.
 export const expoSlides: ExpoSlide[] = [
   {
     id: '1',
-    title: 'Booth Sponsor & Partner',
-    description: 'Lorem Ipsum...',
+    title: '',
+    description: '',
+    image: '',
   },
   {
     id: '2',
-    title: 'Booth Komunitas',
-    description: 'Lorem Ipsum...',
+    title: '',
+    description: '',
+    image: '',
   },
   {
     id: '3',
-    title: 'Booth UMKM',
-    description: 'Lorem Ipsum...',
+    title: '',
+    description: '',
+    image: '',
   },
 ]
