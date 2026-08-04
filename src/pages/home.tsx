@@ -5,21 +5,21 @@ import emailLogo from '../assets/email-logo.png'
 function HomePage() {
   return (
     <main className="flex-1">
-      <section className="relative flex min-h-[600px] flex-col items-center justify-center px-5 py-20 md:min-h-[700px]">
-        <div className="mb-8 flex min-h-[300px] w-full max-w-4xl items-center justify-center border-line-soft/30 md:min-h-[400px]">
+      <section className="relative flex min-h-[600px] flex-col items-center justify-end px-0 py-0 md:min-h-[700px]">
+        <div className="absolute inset-0 w-full h-full">
           <img 
           src="/src/assets/web-design-himti.png" alt="Background web himti"
-          className="mb-8 w-full max-w-4xl object-contain" 
+          className="w-full h-full object-cover" 
           />
         </div>
 
-        <div className="mb-6 max-w-md rounded-lg border border-line-soft/50 bg-bg-panel/50 px-6 py-4 text-center backdrop-blur-sm">
+        <div className="relative z-10 mb-6 max-w-md rounded-lg border border-line-soft/50 bg-bg-panel/50 px-6 py-4 text-center backdrop-blur-sm">
           <p className="font-display text-base text-text md:text-lg">Tag TECHNO 2026/Headline</p>
         </div>
 
         <button
           type="button"
-          className="rounded-md border-[1.5px] border-gold bg-gold px-8 py-3 font-display text-sm font-bold tracking-[0.1em] text-bg-deep transition-all hover:bg-gold/90 hover:shadow-[0_0_20px_rgba(224,185,63,0.5)]"
+          className="relative z-10 mb-6 rounded-md border-[1.5px] border-gold bg-gold px-8 py-3 font-display text-sm font-bold tracking-[0.1em] text-bg-deep transition-all hover:bg-gold/90 hover:shadow-[0_0_20px_rgba(224,185,63,0.5)]"
         >
           Learn More →
         </button>
