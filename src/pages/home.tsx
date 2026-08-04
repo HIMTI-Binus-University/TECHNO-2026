@@ -1,9 +1,16 @@
+import instagramLogo from '../assets/instagram-logo.png'
+import tiktokLogo from '../assets/tiktok-logo.png'
+import emailLogo from '../assets/email-logo.png'
+
 function HomePage() {
   return (
     <main className="flex-1">
       <section className="relative flex min-h-[600px] flex-col items-center justify-center px-5 py-20 md:min-h-[700px]">
-        <div className="mb-8 flex min-h-[300px] w-full max-w-4xl items-center justify-center rounded-lg border border-line-soft/30 bg-bg-panel/30 md:min-h-[400px]">
-          <p className="font-mono text-sm text-text-muted">Hero Image Placeholder</p>
+        <div className="mb-8 flex min-h-[300px] w-full max-w-4xl items-center justify-center border-line-soft/30 md:min-h-[400px]">
+          <img 
+          src="/src/assets/web-design-himti.png" alt="Background web himti"
+          className="mb-8 w-full max-w-4xl object-contain" 
+          />
         </div>
 
         <div className="mb-6 max-w-md rounded-lg border border-line-soft/50 bg-bg-panel/50 px-6 py-4 text-center backdrop-blur-sm">
@@ -47,21 +54,45 @@ function HomePage() {
       <section className="px-5 py-16 md:px-16">
         <div className="mx-auto max-w-[1000px]">
           <div className="mb-10 flex items-center justify-center gap-3">
-            <span className="h-0.5 w-12 bg-gradient-to-r from-transparent to-gold md:w-24" />
+            <img 
+                src="/src/assets/diamond-shape.svg" alt="Diamond" 
+                className="h-2 w-3 shrink-0 object-contain"
+            />
+            <img 
+                src="/src/assets/stripe.svg" alt="Stripe-Left"
+                className="w-14 h-[39.5px]"
+                style={{
+                    transform: "scaleX(-1)",
+                    opacity: 1,
+                }}
+            />
             <h2 className="whitespace-nowrap font-display text-xl font-bold tracking-[0.2em] text-white md:text-3xl">
               Benefits
             </h2>
-            <span className="h-0.5 w-12 bg-gradient-to-l from-transparent to-gold md:w-24" />
+            <img 
+                src="/src/assets/stripe.svg" alt="Stripe-Right" 
+                className="w-14 h-[39.5px]"
+                style={{
+                    opacity: 1,
+                }}
+            />
+            <img 
+                src="/src/assets/diamond-shape.svg" alt="Diamond" 
+                className="h-2 w-3 shrink-0 object-contain"
+            />
           </div>
 
           <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-            {['Starter Pack', 'HIMTI Kit', 'SOOS Inauguration'].map((title) => (
+            {['Starter Pack', 'HIMTI Kit', 'SOCS Inauguration'].map((title) => (
               <div
                 key={title}
                 className="flex flex-col items-center gap-4 rounded-lg border border-line-soft/70 bg-bg-panel px-6 py-8"
               >
-                <div className="flex h-24 w-24 items-center justify-center rounded-lg border border-line-soft bg-bg-deep/50">
-                  <div className="h-16 w-16 rounded border-2 border-text/30" />
+                <div className="flex h-24 w-24 items-center justify-center border-line-soft">
+                  <img 
+                      src="/src/assets/box-icon.png" alt="Box icon"
+                      className="h-24 w-24 object-contain"
+                  />
                 </div>
                 <p className="font-display text-base font-bold text-white">{title}</p>
               </div>
@@ -73,11 +104,32 @@ function HomePage() {
       <section className="px-5 py-16 md:px-16">
         <div className="mx-auto max-w-[1000px]">
           <div className="mb-10 flex items-center justify-center gap-3">
-            <span className="h-0.5 w-12 bg-gradient-to-r from-transparent to-gold md:w-24" />
+            <img 
+                src="/src/assets/diamond-shape.svg" alt="Diamond" 
+                className="h-2 w-3 shrink-0 object-contain"
+            />
+            <img 
+                src="/src/assets/stripe.svg" alt="Stripe-Left"
+                className="w-14 h-[39.5px]"
+                style={{
+                    transform: "scaleX(-1)",
+                    opacity: 1,
+                }}
+            />
             <h2 className="whitespace-nowrap font-display text-xl font-bold tracking-[0.2em] text-white md:text-3xl">
               Our Sponsors
             </h2>
-            <span className="h-0.5 w-12 bg-gradient-to-l from-transparent to-gold md:w-24" />
+            <img 
+                src="/src/assets/stripe.svg" alt="Stripe-Right" 
+                className="w-14 h-[39.5px]"
+                style={{
+                    opacity: 1,
+                }}
+            />
+            <img 
+                src="/src/assets/diamond-shape.svg" alt="Diamond" 
+                className="h-2 w-3 shrink-0 object-contain"
+            />
           </div>
 
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
@@ -96,25 +148,46 @@ function HomePage() {
       <section className="px-5 py-16 md:px-16">
         <div className="mx-auto max-w-[600px]">
           <div className="mb-10 flex items-center justify-center gap-3">
-            <span className="h-0.5 w-12 bg-gradient-to-r from-transparent to-gold md:w-24" />
+            <img 
+                src="/src/assets/diamond-shape.svg" alt="Diamond" 
+                className="h-2 w-3 shrink-0 object-contain"
+            />
+            <img 
+                src="/src/assets/stripe.svg" alt="Stripe-Left"
+                className="w-14 h-[39.5px]"
+                style={{
+                    transform: "scaleX(-1)",
+                    opacity: 1,
+                }}
+            />
             <h2 className="whitespace-nowrap font-display text-xl font-bold tracking-[0.2em] text-white md:text-3xl">
               Contact Us
             </h2>
-            <span className="h-0.5 w-12 bg-gradient-to-l from-transparent to-gold md:w-24" />
+            <img 
+                src="/src/assets/stripe.svg" alt="Stripe-Right" 
+                className="w-14 h-[39.5px]"
+                style={{
+                    opacity: 1,
+                }}
+            />
+            <img 
+                src="/src/assets/diamond-shape.svg" alt="Diamond" 
+                className="h-2 w-3 shrink-0 object-contain"
+            />
           </div>
 
           <div className="flex flex-col gap-4">
             {[
-              { icon: 'IG', label: 'Instagram' },
-              { icon: 'TT', label: 'TikTok' },
-              { icon: '@', label: 'E-Mail' },
+              { icon: instagramLogo, label: 'Instagram' },
+              { icon: tiktokLogo, label: 'TikTok' },
+              { icon: emailLogo, label: 'E-Mail' },
             ].map((item) => (
               <button
                 key={item.label}
                 type="button"
                 className="flex items-center justify-center gap-3 rounded-lg border border-line-soft bg-bg-panel px-6 py-4 font-display text-base text-white transition-colors hover:border-gold hover:text-gold"
               >
-                <span className="font-bold">{item.icon}</span>
+                 <img src={item.icon} alt={item.label} className="h-5 w-5 object-contain" />
                 <span>{item.label}</span>
               </button>
             ))}
