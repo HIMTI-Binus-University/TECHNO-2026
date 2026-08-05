@@ -1,6 +1,7 @@
 import instagramLogo from '../assets/instagram-logo.png'
 import tiktokLogo from '../assets/tiktok-logo.png'
 import emailLogo from '../assets/email-logo.png'
+import boxIcon from '../assets/box-icon.png'
 
 function HomePage() {
   return (
@@ -30,7 +31,7 @@ function HomePage() {
           <div className="flex min-h-[280px] flex-col justify-between rounded-lg border border-line-soft/70 bg-bg-panel p-6">
             <div>
               <h2 className="mb-3 font-display text-lg font-bold text-white">What is TECHNO?</h2>
-              <p className="font-mono text-sm text-text-muted">Techno is lorem ipsum..</p>
+              <p className="font-mono text-sm text-text-muted">TECHNO (Togetherness, Entertainment, and Chasing New Opportunity) is a joint event organized by HIMTI BINUS to welcome and inaugurate freshmen of the BINUS University School of Computer Science (SOCS). </p>
             </div>
             <button
               type="button"
@@ -40,12 +41,15 @@ function HomePage() {
             </button>
           </div>
 
-          <div className="flex min-h-[280px] flex-col items-center justify-center rounded-lg border border-line-soft/70 bg-bg-panel p-6">
-            <h2 className="mb-4 text-center font-display text-lg font-bold text-white">
+          <div className="flex min-h-[280px] flex-col items-center justify-start rounded-lg border border-line-soft/70 bg-bg-panel p-6">
+            <h2 className="mb-3 text-lg font-display text-lg font-bold text-white">
               Foto Panggung / Acara Tahun lalu
             </h2>
-            <div className="flex h-40 w-full items-center justify-center rounded border border-line-soft/50 bg-bg-deep/50">
-              <p className="font-mono text-xs text-text-muted">Image Placeholder</p>
+            <div className="flex h-64 w-full items-center justify-center rounded border border-line-soft/50 bg-bg-deep/50">
+              <img 
+                  src="/src/assets/panggung-tahun-lalu.jpg" alt="Dokumentasi panggung tahun lalu" 
+                   className="h-full w-full rounded border border-line-soft/50 object-cover" 
+              />
             </div>
           </div>
         </div>
@@ -83,18 +87,32 @@ function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-            {['Starter Pack', 'HIMTI Kit', 'SOCS Inauguration'].map((title) => (
+            {[
+              {
+                title: 'Starter Pack',
+                description:
+                  'Freshmen will receive PBP (Pengenalan Bahasa Pemrograman) training as a provision before entering the first semester lectures and to teach the basics of programming.',
+              },
+              {
+                title: 'HIMTI Kit',
+                description:
+                  'After following the TECHNO Main Event, Freshmen will be provided with supplies in the form of a HIMTI KIT, which is a package containing a summary of courses and a collection of software that supports SoCS student lectures.',
+              },
+              {
+                title: 'SOCS Inauguration',
+                description:
+                  "One of the series of TECHNO events is the inauguration of BINUS University's SoCS freshmen which is officially held under the SoCS faculty. Therefore, TECHNO is specifically for Binusian SoCS students.",
+              },
+            ].map(({ title, description }) => (
               <div
                 key={title}
                 className="flex flex-col items-center gap-4 rounded-lg border border-line-soft/70 bg-bg-panel px-6 py-8"
               >
-                <div className="flex h-24 w-24 items-center justify-center border-line-soft">
-                  <img 
-                      src="/src/assets/box-icon.png" alt="Box icon"
-                      className="h-24 w-24 object-contain"
-                  />
+                <div className="flex h-24 w-24 items-center justify-center">
+                  <img src={boxIcon} alt={title} className="h-24 w-24 object-contain" />
                 </div>
                 <p className="font-display text-base font-bold text-white">{title}</p>
+                <p className="text-center text-sm text-text-muted">{description}</p>
               </div>
             ))}
           </div>
