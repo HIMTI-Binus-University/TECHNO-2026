@@ -48,6 +48,7 @@ function FAQPage() {
             <p className="mb-4 text-justify font-mono text-lg font-bold leading-none tracking-normal text-[#000000] md:mb-6 md:text-[24px]">
               {active.question}
             </p>
+            <br></br>
             <p className="mb-4 text-justify font-mono text-lg leading-snug tracking-normal text-[#000000] md:mb-6 md:text-[18px]">
               {active.answer}
             </p>
@@ -57,6 +58,7 @@ function FAQPage() {
                 <p className="mb-4 text-justify font-mono text-lg font-bold leading-none tracking-normal text-[#000000] md:mb-6 md:text-[24px]">
                   {active.question2}
                 </p>
+                <br></br>
                 <p className="mb-4 text-justify font-mono text-lg leading-snug tracking-normal text-[#000000] md:mb-6 md:text-[18px]">
                   {active.answer2}
                 </p>
@@ -68,6 +70,7 @@ function FAQPage() {
                 <p className="mb-4 text-justify font-mono text-lg font-bold leading-none tracking-normal text-[#000000] md:mb-6 md:text-[24px]">
                   {active.question3}
                 </p>
+                <br></br>
                 <p className="mb-4 text-justify font-mono text-lg leading-snug tracking-normal text-[#000000] md:mb-6 md:text-[18px]">
                   {active.answer3}
                 </p>
