@@ -41,9 +41,14 @@ function Navbar() {
         </nav>
 
         <div className="flex items-center gap-3 md:justify-self-end">
-          <NavLink to="/register" className={`hidden md:inline-block ${registerClasses}`}>
+          <a 
+            href="https://link.himtibinus.or.id/EarlyBirdTECHNO2026" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className={`hidden md:inline-block ${registerClasses}`}
+          >
             REGISTER
-          </NavLink>
+          </a>
 
           <button
             type="button"
@@ -73,9 +78,15 @@ function Navbar() {
                 {link.label}
               </NavLink>
             ))}
-            <NavLink to="/register" className={`mt-3 ${registerClasses}`} onClick={() => setOpen(false)}>
+            <a 
+              href="https://link.himtibinus.or.id/EarlyBirdTECHNO2026" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className={`mt-3 ${registerClasses}`} 
+              onClick={() => setOpen(false)}
+            >
               REGISTER
-            </NavLink>
+            </a>
           </nav>
         )}
       </div>
