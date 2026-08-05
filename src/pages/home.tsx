@@ -1,25 +1,26 @@
 import instagramLogo from '../assets/instagram-logo.png'
 import tiktokLogo from '../assets/tiktok-logo.png'
 import emailLogo from '../assets/email-logo.png'
+import boxIcon from '../assets/box-icon.png'
 
 function HomePage() {
   return (
     <main className="flex-1">
-      <section className="relative flex min-h-[600px] flex-col items-center justify-center px-5 py-20 md:min-h-[700px]">
-        <div className="mb-8 flex min-h-[300px] w-full max-w-4xl items-center justify-center border-line-soft/30 md:min-h-[400px]">
+      <section className="relative flex min-h-[600px] flex-col items-center justify-end px-0 py-0 md:min-h-[700px]">
+        <div className="absolute inset-0 w-full h-full">
           <img 
           src="/src/assets/web-design-himti.png" alt="Background web himti"
-          className="mb-8 w-full max-w-4xl object-contain" 
+          className="w-full h-full object-cover" 
           />
         </div>
 
-        <div className="mb-6 max-w-md rounded-lg border border-line-soft/50 bg-bg-panel/50 px-6 py-4 text-center backdrop-blur-sm">
+        <div className="relative z-10 mb-6 max-w-md rounded-lg border border-line-soft/50 bg-bg-panel/50 px-6 py-4 text-center backdrop-blur-sm">
           <p className="font-display text-base text-text md:text-lg">Tag TECHNO 2026/Headline</p>
         </div>
 
         <button
           type="button"
-          className="rounded-md border-[1.5px] border-gold bg-gold px-8 py-3 font-display text-sm font-bold tracking-[0.1em] text-bg-deep transition-all hover:bg-gold/90 hover:shadow-[0_0_20px_rgba(224,185,63,0.5)]"
+          className="relative z-10 mb-6 rounded-md border-[1.5px] border-gold bg-gold px-8 py-3 font-display text-sm font-bold tracking-[0.1em] text-bg-deep transition-all hover:bg-gold/90 hover:shadow-[0_0_20px_rgba(224,185,63,0.5)]"
         >
           Learn More →
         </button>
@@ -30,7 +31,7 @@ function HomePage() {
           <div className="flex min-h-[280px] flex-col justify-between rounded-lg border border-line-soft/70 bg-bg-panel p-6">
             <div>
               <h2 className="mb-3 font-display text-lg font-bold text-white">What is TECHNO?</h2>
-              <p className="font-mono text-sm text-text-muted">Techno is lorem ipsum..</p>
+              <p className="font-mono text-sm text-text-muted">TECHNO (Togetherness, Entertainment, and Chasing New Opportunity) is a joint event organized by HIMTI BINUS to welcome and inaugurate freshmen of the BINUS University School of Computer Science (SOCS). </p>
             </div>
             <button
               type="button"
@@ -40,12 +41,15 @@ function HomePage() {
             </button>
           </div>
 
-          <div className="flex min-h-[280px] flex-col items-center justify-center rounded-lg border border-line-soft/70 bg-bg-panel p-6">
-            <h2 className="mb-4 text-center font-display text-lg font-bold text-white">
+          <div className="flex min-h-[280px] flex-col items-center justify-start rounded-lg border border-line-soft/70 bg-bg-panel p-6">
+            <h2 className="mb-3 text-lg font-display text-lg font-bold text-white">
               Foto Panggung / Acara Tahun lalu
             </h2>
-            <div className="flex h-40 w-full items-center justify-center rounded border border-line-soft/50 bg-bg-deep/50">
-              <p className="font-mono text-xs text-text-muted">Image Placeholder</p>
+            <div className="flex h-64 w-full items-center justify-center rounded border border-line-soft/50 bg-bg-deep/50">
+              <img 
+                  src="/src/assets/panggung-tahun-lalu.jpg" alt="Dokumentasi panggung tahun lalu" 
+                   className="h-full w-full rounded border border-line-soft/50 object-cover" 
+              />
             </div>
           </div>
         </div>
@@ -83,18 +87,32 @@ function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-            {['Starter Pack', 'HIMTI Kit', 'SOCS Inauguration'].map((title) => (
+            {[
+              {
+                title: 'Starter Pack',
+                description:
+                  'Freshmen will receive PBP (Pengenalan Bahasa Pemrograman) training as a provision before entering the first semester lectures and to teach the basics of programming.',
+              },
+              {
+                title: 'HIMTI Kit',
+                description:
+                  'After following the TECHNO Main Event, Freshmen will be provided with supplies in the form of a HIMTI KIT, which is a package containing a summary of courses and a collection of software that supports SoCS student lectures.',
+              },
+              {
+                title: 'SOCS Inauguration',
+                description:
+                  "One of the series of TECHNO events is the inauguration of BINUS University's SoCS freshmen which is officially held under the SoCS faculty. Therefore, TECHNO is specifically for Binusian SoCS students.",
+              },
+            ].map(({ title, description }) => (
               <div
                 key={title}
                 className="flex flex-col items-center gap-4 rounded-lg border border-line-soft/70 bg-bg-panel px-6 py-8"
               >
-                <div className="flex h-24 w-24 items-center justify-center border-line-soft">
-                  <img 
-                      src="/src/assets/box-icon.png" alt="Box icon"
-                      className="h-24 w-24 object-contain"
-                  />
+                <div className="flex h-24 w-24 items-center justify-center">
+                  <img src={boxIcon} alt={title} className="h-24 w-24 object-contain" />
                 </div>
                 <p className="font-display text-base font-bold text-white">{title}</p>
+                <p className="text-center text-sm text-text-muted">{description}</p>
               </div>
             ))}
           </div>
