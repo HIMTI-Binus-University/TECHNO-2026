@@ -2,6 +2,7 @@ import instagramLogo from '../assets/instagram-logo.png'
 import tiktokLogo from '../assets/tiktok-logo.png'
 import emailLogo from '../assets/email-logo.png'
 import boxIcon from '../assets/box-icon.png'
+import dewawebLogo from '../assets/dewaweb-chp-square-logo-rgb.png'
 
 function HomePage() {
   return (
@@ -156,13 +157,20 @@ function HomePage() {
             />
           </div>
 
-          <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
-            {Array.from({ length: 8 }).map((_, i) => (
-              <div key={i} className="flex flex-col items-center gap-3">
+          <div className="grid grid-cols-2 gap-6">
+            {[
+              { name: 'CBN', logo: null },
+              { name: 'PT. Dewaweb', logo: dewawebLogo }
+            ].map((sponsor) => (
+              <div key={sponsor.name} className="flex flex-col items-center gap-3">
                 <div className="flex aspect-square w-full items-center justify-center rounded-full border border-line-soft bg-bg-panel">
-                  <p className="font-mono text-xs text-text-muted">Logo</p>
+                  {sponsor.logo ? (
+                    <img src={sponsor.logo} alt={sponsor.name} className="h-3/4 w-3/4 object-contain" />
+                  ) : (
+                    <p className="font-mono text-xs text-text-muted">Logo</p>
+                  )}
                 </div>
-                <p className="font-mono text-sm text-text">John Doe</p>
+                <p className="font-mono text-sm text-text">{sponsor.name}</p>
               </div>
             ))}
           </div>
