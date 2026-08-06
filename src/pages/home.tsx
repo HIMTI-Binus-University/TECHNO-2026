@@ -2,7 +2,7 @@ import instagramLogo from '../assets/instagram-logo.png'
 import tiktokLogo from '../assets/tiktok-logo.png'
 import emailLogo from '../assets/email-logo.png'
 import boxIcon from '../assets/box-icon.png'
-import dewawebLogo from '../assets/dewaweb-chp-square-logo-rgb.png'
+import dewawebLogo from '../assets/Dewaweb-01-monochrome-cloud-hosting-expert-02.png'
 
 function HomePage() {
   return (
@@ -165,7 +165,7 @@ function HomePage() {
               <div key={sponsor.name} className="flex flex-col items-center gap-3">
                 <div className="flex aspect-square w-full items-center justify-center rounded-full border border-line-soft bg-bg-panel">
                   {sponsor.logo ? (
-                    <img src={sponsor.logo} alt={sponsor.name} className="h-3/4 w-3/4 object-contain" />
+                    <img src={sponsor.logo} alt={sponsor.name} className="h-3/4 w-3/4 object-contain -translate-y-2" />
                   ) : (
                     <p className="font-mono text-xs text-text-muted">Logo</p>
                   )}
