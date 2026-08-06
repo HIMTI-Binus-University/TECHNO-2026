@@ -21,19 +21,25 @@ function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-40 bg-bg to-transparent px-5 pt-5 pb-2 md:px-16">
+    <header className="sticky top-0 z-40 bg-bg-deep/70 backdrop-blur-md px-5 py-3 md:px-16">
       <div className="relative mx-auto flex max-w-[1200px] items-center justify-between gap-6 md:grid md:grid-cols-[1fr_auto_1fr]">
-        <NavLink to="/" className="flex shrink-0 items-center no-underline md:justify-self-start" onClick={() => setOpen(false)}>
+        <NavLink
+          to="/"
+          className="flex shrink-0 items-center no-underline md:justify-self-start"
+          onClick={() => setOpen(false)}
+        >
           <img src={technoLogo} alt="Techno 2026" className="h-[46px] w-auto" />
         </NavLink>
 
-        {/* Desktop nav: centered via the 1fr/auto/1fr grid */}
+        {/* Desktop nav */}
         <nav className="hidden items-center gap-8 md:flex md:justify-self-center lg:gap-10">
           {NAV_LINKS.map((link) => (
             <NavLink
               key={link.to}
               to={link.to}
-              className={({ isActive }) => `${linkBase} ${isActive ? linkActive : ''}`}
+              className={({ isActive }) =>
+                `${linkBase} ${isActive ? linkActive : ''}`
+              }
             >
               {link.label}
             </NavLink>
@@ -41,10 +47,10 @@ function Navbar() {
         </nav>
 
         <div className="flex items-center gap-3 md:justify-self-end">
-          <a 
-            href="https://link.himtibinus.or.id/EarlyBirdTECHNO2026" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <a
+            href="https://link.himtibinus.or.id/EarlyBirdTECHNO2026"
+            target="_blank"
+            rel="noopener noreferrer"
             className={`hidden md:inline-block ${registerClasses}`}
           >
             REGISTER
@@ -78,11 +84,12 @@ function Navbar() {
                 {link.label}
               </NavLink>
             ))}
-            <a 
-              href="https://link.himtibinus.or.id/EarlyBirdTECHNO2026" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className={`mt-3 ${registerClasses}`} 
+
+            <a
+              href="https://link.himtibinus.or.id/EarlyBirdTECHNO2026"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`mt-3 ${registerClasses}`}
               onClick={() => setOpen(false)}
             >
               REGISTER

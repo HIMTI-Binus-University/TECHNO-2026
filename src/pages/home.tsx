@@ -21,6 +21,12 @@ function HomePage() {
         <button
           type="button"
           className="relative z-10 mb-6 rounded-md border-[1.5px] border-gold bg-gold px-8 py-3 font-display text-sm font-bold tracking-[0.1em] text-bg-deep transition-all hover:bg-gold/90 hover:shadow-[0_0_20px_rgba(224,185,63,0.5)]"
+          onClick={() => {
+            document.getElementById('about-techno')?.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+            })
+          }}
         >
           Learn More →
         </button>
@@ -28,7 +34,7 @@ function HomePage() {
 
       <section className="px-5 py-16 md:px-16">
         <div className="mx-auto grid max-w-[1000px] grid-cols-1 gap-5 md:grid-cols-2">
-          <div className="flex min-h-[280px] flex-col justify-between rounded-lg border border-line-soft/70 bg-bg-panel p-6">
+          <div id="about-techno" className="flex min-h-[280px] flex-col justify-between rounded-lg border border-line-soft/70 bg-bg-panel p-6 scroll-mt-24">
             <div>
               <h2 className="mb-3 font-display text-lg font-bold text-white">What is TECHNO?</h2>
               <p className="font-mono text-sm text-text-muted">TECHNO (Togetherness, Entertainment, and Chasing New Opportunity) is a joint event organized by HIMTI BINUS to welcome and inaugurate freshmen of the BINUS University School of Computer Science (SOCS). </p>
