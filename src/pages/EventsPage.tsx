@@ -287,7 +287,7 @@ function EventsPage() {
 
         {/* EXPO */}
         <section>
-          <SectionHeading label={`EXPO (${total})`} />
+          <SectionHeading label={`EXPO`} />
           <div className="relative">
             <button
               type="button"
