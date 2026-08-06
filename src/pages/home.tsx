@@ -170,7 +170,7 @@ function HomePage() {
                     <p className="font-mono text-xs text-text-muted">Logo</p>
                   )}
                 </div>
-                <p className="font-mono text-sm text-text">{sponsor.name}</p>
+                <p className="font-display text-xl font-bold tracking-[0.15em] text-white md:text-2xl" style={{ textShadow: '0 0 20px rgba(96, 165, 250, 0.6), 0 0 2px rgba(255, 255, 255, 0.8)' }}>{sponsor.name}</p>
               </div>
             ))}
           </div>
