@@ -196,18 +196,20 @@ function HomePage() {
 
           <div className="flex flex-col gap-4">
             {[
-              { icon: instagramLogo, label: 'Instagram' },
-              { icon: tiktokLogo, label: 'TikTok' },
-              { icon: emailLogo, label: 'E-Mail' },
+              { icon: instagramLogo, label: 'Instagram', href: 'https://instagram.com/techno.himti' },
+              { icon: tiktokLogo, label: 'TikTok', href: 'https://www.tiktok.com/@techno.himti' },
+              { icon: emailLogo, label: 'E-Mail',  href: 'https://mail.google.com/mail/?view=cm&fs=1&to=himtitechno2026@gmail.com' },
             ].map((item) => (
-              <button
+              <a
                 key={item.label}
-                type="button"
-                className="flex items-center justify-center gap-3 rounded-lg border border-line-soft bg-bg-panel px-6 py-4 font-display text-base text-white transition-colors hover:border-gold hover:text-gold"
+                href={item.href}
+                target={item.href.startsWith('mailto:') ? undefined : '_blank'}
+                rel={item.href.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
+                className="flex items-center justify-center gap-3 rounded-lg border border-line-soft bg-bg-panel px-6 py-4 font-display text-base text-white no-underline transition-colors hover:border-gold hover:text-gold"
               >
                  <img src={item.icon} alt={item.label} className="h-5 w-5 object-contain" />
                 <span>{item.label}</span>
-              </button>
+              </a>
             ))}
           </div>
         </div>
