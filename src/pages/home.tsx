@@ -128,10 +128,12 @@ function HomePage() {
             ].map(({ title, description }) => (
               <div
                 key={title}
-                className="flex flex-col items-center gap-4 rounded-lg border border-line-soft/70 bg-bg-panel px-6 py-8"
+                className="group flex flex-col items-center gap-4 rounded-lg border border-line-soft/70 bg-bg-panel px-6 py-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-gold hover:shadow-[0_10px_30px_-8px_rgba(224,185,63,0.35)]"
               >
                 <div className="flex h-24 w-24 items-center justify-center">
-                  <img src={boxIcon} alt={title} className="h-24 w-24 object-contain" />
+                  <img 
+                    src={boxIcon} alt={title} 
+                    className="h-24 w-24 object-contain transition-transform duration-300 group-hover:scale-110" />
                 </div>
                 <p className="font-display text-base font-bold text-white">{title}</p>
                 <p className="text-center text-sm text-text-muted">{description}</p>
