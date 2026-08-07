@@ -2,6 +2,11 @@ import instagramLogo from '../assets/instagram-logo.png'
 import tiktokLogo from '../assets/tiktok-logo.png'
 import emailLogo from '../assets/email-logo.png'
 import boxIcon from '../assets/box-icon.png'
+import dewawebLogo from '../assets/Dewaweb-01-monochrome-cloud-hosting-expert-02.png'
+import webDesignHimti from '../assets/web-design-himti.png'
+import panggungTahunLalu from '../assets/panggung-tahun-lalu.jpg'
+import diamondShape from '../assets/diamond-shape.svg'
+import stripe from '../assets/stripe.svg'
 
 function HomePage() {
   return (
@@ -9,18 +14,33 @@ function HomePage() {
       <section className="relative flex min-h-[600px] flex-col items-center justify-end px-0 py-0 md:min-h-[700px]">
         <div className="absolute inset-0 w-full h-full">
           <img 
-          src="/src/assets/web-design-himti.png" alt="Background web himti"
+          src={webDesignHimti} alt="Background web himti"
           className="w-full h-full object-cover" 
           />
         </div>
 
-        <div className="relative z-10 mb-6 max-w-md rounded-lg border border-line-soft/50 bg-bg-panel/50 px-6 py-4 text-center backdrop-blur-sm">
-          <p className="font-display text-base text-text md:text-lg">Tag TECHNO 2026/Headline</p>
+        <div className="relative z-10 mb-6 max-w-xl rounded-full border border-cyan-400/40 bg-bg-deep/40 px-8 py-4 text-center backdrop-blur-md shadow-[0_0_35px_rgba(45,212,191,0.25)]">
+          <p 
+            className="flex flex-wrap items-center justify-center gap-3 font-display text-lg font-bold uppercase tracking-[0.15em] text-white md:text-2xl"
+            style={{ textShadow: '0 0 20px rgba(45, 212, 191, 0.6), 0 0 40px rgba(168, 85, 247, 0.35)' }}
+          >
+            <span>Activate</span>
+            <img src={diamondShape} alt="" className="h-2 w-2 opacity-70" />
+            <span>Innovate</span>
+            <img src={diamondShape} alt="" className="h-2 w-2 opacity-70" />
+            <span>Elevate</span>
+          </p>
         </div>
 
         <button
           type="button"
           className="relative z-10 mb-6 rounded-md border-[1.5px] border-gold bg-gold px-8 py-3 font-display text-sm font-bold tracking-[0.1em] text-bg-deep transition-all hover:bg-gold/90 hover:shadow-[0_0_20px_rgba(224,185,63,0.5)]"
+          onClick={() => {
+            document.getElementById('about-techno')?.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+            })
+          }}
         >
           Learn More →
         </button>
@@ -28,17 +48,19 @@ function HomePage() {
 
       <section className="px-5 py-16 md:px-16">
         <div className="mx-auto grid max-w-[1000px] grid-cols-1 gap-5 md:grid-cols-2">
-          <div className="flex min-h-[280px] flex-col justify-between rounded-lg border border-line-soft/70 bg-bg-panel p-6">
+          <div id="about-techno" className="flex min-h-[280px] flex-col justify-between rounded-lg border border-line-soft/70 bg-bg-panel p-6 scroll-mt-24">
             <div>
               <h2 className="mb-3 font-display text-lg font-bold text-white">What is TECHNO?</h2>
               <p className="font-mono text-sm text-text-muted">TECHNO (Togetherness, Entertainment, and Chasing New Opportunity) is a joint event organized by HIMTI BINUS to welcome and inaugurate freshmen of the BINUS University School of Computer Science (SOCS). </p>
             </div>
-            <button
-              type="button"
-              className="mt-4 self-start rounded-md border border-line-soft px-5 py-2 font-mono text-sm text-text transition-colors hover:border-gold hover:text-gold"
+           <a
+              href="https://link.himtibinus.or.id/GuidebookTECHNO2026"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 self-start rounded-md border border-line-soft px-5 py-2 font-mono text-sm text-text no-underline transition-colors hover:border-gold hover:text-gold"
             >
               Guidebook →
-            </button>
+            </a>
           </div>
 
           <div className="flex min-h-[280px] flex-col items-center justify-start rounded-lg border border-line-soft/70 bg-bg-panel p-6">
@@ -47,7 +69,7 @@ function HomePage() {
             </h2>
             <div className="flex h-64 w-full items-center justify-center rounded border border-line-soft/50 bg-bg-deep/50">
               <img 
-                  src="/src/assets/panggung-tahun-lalu.jpg" alt="Dokumentasi panggung tahun lalu" 
+                  src={panggungTahunLalu} alt="Dokumentasi panggung tahun lalu" 
                    className="h-full w-full rounded border border-line-soft/50 object-cover" 
               />
             </div>
@@ -59,11 +81,11 @@ function HomePage() {
         <div className="mx-auto max-w-[1000px]">
           <div className="mb-10 flex items-center justify-center gap-3">
             <img 
-                src="/src/assets/diamond-shape.svg" alt="Diamond" 
+                src={diamondShape} alt="Diamond" 
                 className="h-2 w-3 shrink-0 object-contain"
             />
             <img 
-                src="/src/assets/stripe.svg" alt="Stripe-Left"
+                src={stripe} alt="Stripe-Left"
                 className="w-14 h-[39.5px]"
                 style={{
                     transform: "scaleX(-1)",
@@ -74,14 +96,14 @@ function HomePage() {
               Benefits
             </h2>
             <img 
-                src="/src/assets/stripe.svg" alt="Stripe-Right" 
+                src={stripe} alt="Stripe-Right" 
                 className="w-14 h-[39.5px]"
                 style={{
                     opacity: 1,
                 }}
             />
             <img 
-                src="/src/assets/diamond-shape.svg" alt="Diamond" 
+                src={diamondShape} alt="Diamond" 
                 className="h-2 w-3 shrink-0 object-contain"
             />
           </div>
@@ -123,11 +145,11 @@ function HomePage() {
         <div className="mx-auto max-w-[1000px]">
           <div className="mb-10 flex items-center justify-center gap-3">
             <img 
-                src="/src/assets/diamond-shape.svg" alt="Diamond" 
+                src={diamondShape} alt="Diamond" 
                 className="h-2 w-3 shrink-0 object-contain"
             />
             <img 
-                src="/src/assets/stripe.svg" alt="Stripe-Left"
+                src={stripe} alt="Stripe-Left"
                 className="w-14 h-[39.5px]"
                 style={{
                     transform: "scaleX(-1)",
@@ -138,25 +160,32 @@ function HomePage() {
               Our Sponsors
             </h2>
             <img 
-                src="/src/assets/stripe.svg" alt="Stripe-Right" 
+                src={stripe} alt="Stripe-Right" 
                 className="w-14 h-[39.5px]"
                 style={{
                     opacity: 1,
                 }}
             />
             <img 
-                src="/src/assets/diamond-shape.svg" alt="Diamond" 
+                src={diamondShape} alt="Diamond" 
                 className="h-2 w-3 shrink-0 object-contain"
             />
           </div>
 
-          <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
-            {Array.from({ length: 8 }).map((_, i) => (
-              <div key={i} className="flex flex-col items-center gap-3">
+          <div className="grid grid-cols-2 gap-6">
+            {[
+              { name: 'CBN', logo: null },
+              { name: 'PT. Dewaweb', logo: dewawebLogo }
+            ].map((sponsor) => (
+              <div key={sponsor.name} className="flex flex-col items-center gap-3">
                 <div className="flex aspect-square w-full items-center justify-center rounded-full border border-line-soft bg-bg-panel">
-                  <p className="font-mono text-xs text-text-muted">Logo</p>
+                  {sponsor.logo ? (
+                    <img src={sponsor.logo} alt={sponsor.name} className="h-3/4 w-3/4 object-contain -translate-y-2" />
+                  ) : (
+                    <p className="font-mono text-xs text-text-muted">Logo</p>
+                  )}
                 </div>
-                <p className="font-mono text-sm text-text">John Doe</p>
+                <p className="font-display text-xl font-bold tracking-[0.15em] text-white md:text-2xl" style={{ textShadow: '0 0 20px rgba(96, 165, 250, 0.6), 0 0 2px rgba(255, 255, 255, 0.8)' }}>{sponsor.name}</p>
               </div>
             ))}
           </div>
@@ -167,11 +196,11 @@ function HomePage() {
         <div className="mx-auto max-w-[600px]">
           <div className="mb-10 flex items-center justify-center gap-3">
             <img 
-                src="/src/assets/diamond-shape.svg" alt="Diamond" 
+                src={diamondShape} alt="Diamond" 
                 className="h-2 w-3 shrink-0 object-contain"
             />
             <img 
-                src="/src/assets/stripe.svg" alt="Stripe-Left"
+                src={stripe} alt="Stripe-Left"
                 className="w-14 h-[39.5px]"
                 style={{
                     transform: "scaleX(-1)",
@@ -182,14 +211,14 @@ function HomePage() {
               Contact Us
             </h2>
             <img 
-                src="/src/assets/stripe.svg" alt="Stripe-Right" 
+                src={stripe} alt="Stripe-Right" 
                 className="w-14 h-[39.5px]"
                 style={{
                     opacity: 1,
                 }}
             />
             <img 
-                src="/src/assets/diamond-shape.svg" alt="Diamond" 
+                src={diamondShape} alt="Diamond" 
                 className="h-2 w-3 shrink-0 object-contain"
             />
           </div>
