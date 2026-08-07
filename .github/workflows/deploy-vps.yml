@@ -80,12 +80,12 @@ jobs:
           if [[ "$TARGET" == "production" ]]; then
             echo "target=production" >> "$GITHUB_OUTPUT"
             echo "image_tag=prod" >> "$GITHUB_OUTPUT"
-            echo "service=techno-2026-prod" >> "$GITHUB_OUTPUT"
+            echo "service=${{ env.CONTAINER_SERVICE }}" >> "$GITHUB_OUTPUT"
             echo "profile=prod" >> "$GITHUB_OUTPUT"
           else
             echo "target=development" >> "$GITHUB_OUTPUT"
             echo "image_tag=dev" >> "$GITHUB_OUTPUT"
-            echo "service=techno-2026-dev" >> "$GITHUB_OUTPUT"
+            echo "service=${{ env.CONTAINER_SERVICE }}" >> "$GITHUB_OUTPUT"
             echo "profile=dev" >> "$GITHUB_OUTPUT"
           fi
 
