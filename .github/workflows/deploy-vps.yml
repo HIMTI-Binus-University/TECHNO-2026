@@ -18,6 +18,7 @@ on:
 
 env:
   IMAGE_NAME: ghcr.io/himti-binus-university/techno-2026
+  CONTAINER_SERVICE: techno2026
 
 jobs:
   build-and-push:
