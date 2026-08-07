@@ -1,5 +1,10 @@
 import { useState } from 'react'
 import { expoSlides } from '../data/events'
+import stripe from "../assets/stripe.svg"
+import diamond from "../assets/diamond-shape.svg"
+import python from "../assets/Python-logo.webp"
+import game from "../assets/game-icon.svg"
+import mic from "../assets/mic-icon.svg"
 
 interface PbpScheduleGroup {
   id: string
@@ -47,11 +52,11 @@ function SectionHeading({ label }: { label: string }) {
   return (
     <div className="mb-5 flex items-center justify-center gap-3 md:gap-4">
       <img 
-        src="/src/assets/diamond-shape.svg" alt="Diamond" 
+        src={diamond} alt="Diamond" 
         className="h-2 w-3 shrink-0 object-contain"
       />
       <img 
-        src="/src/assets/stripe.svg" alt="Stripe-Left"
+        src={stripe} alt="Stripe-Left"
         className="w-14 h-[39.5px]"
         style={{
             transform: "scaleX(-1)",
@@ -62,14 +67,14 @@ function SectionHeading({ label }: { label: string }) {
         {label}
       </h2>
       <img 
-        src="/src/assets/stripe.svg" alt="Stripe-Right" 
+        src={stripe} alt="Stripe-Right" 
         className="w-14 h-[39.5px]"
         style={{
             opacity: 1,
         }}
       />
       <img 
-        src="/src/assets/diamond-shape.svg" alt="Diamond" 
+        src={diamond} alt="Diamond" 
         className="h-2 w-3 shrink-0 object-contain"
       />
     </div>
@@ -94,7 +99,6 @@ function EventsPage() {
   return (
     <main className="flex-1 px-5 pb-20 pt-6 md:px-16">
       <div className="mx-auto flex max-w-[1000px] flex-col gap-8">
-        {/* EVENTS */}
         <section>
           <SectionHeading label="EVENTS" />
 
@@ -109,7 +113,6 @@ function EventsPage() {
             </p>
           </div>
 
-          {/* PBP SCHEDULE */}
           <div className="mt-8">
             <p className="mb-4 text-center font-display text-sm font-bold tracking-[0.2em] text-gold md:text-base">
               📅 SCHEDULE
@@ -189,7 +192,6 @@ function EventsPage() {
             </div>
           </div>
 
-          {/* VENUE INFO */}
           <div className="mt-6 rounded-[10px] border border-white/70 bg-bg-panel px-6 py-5">
             <p className="mb-2 font-display text-base font-bold text-white md:text-lg">📍 Venue Information</p>
             <ul className="flex flex-col gap-1.5 font-mono text-sm text-text-muted md:text-base">
@@ -199,7 +201,6 @@ function EventsPage() {
             </ul>
           </div>
 
-          {/* ABOUT PBP */}
           <div className="mt-6 rounded-[10px] border border-white/70 bg-bg-panel px-6 py-5">
             <p className="mb-2 font-display text-base font-bold text-white md:text-lg">🌟 About PBP</p>
             <p className="font-mono text-sm text-text-muted md:text-base">
@@ -210,7 +211,6 @@ function EventsPage() {
             </p>
           </div>
 
-          {/* LEARNING TOPICS */}
           <div className="mt-6 rounded-[10px] border border-white/70 bg-bg-panel px-6 py-5">
             <p className="mb-3 font-display text-base font-bold text-white md:text-lg">📚 Learning Topics</p>
             <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
@@ -223,7 +223,7 @@ function EventsPage() {
             </div>
             <div className="mt-4 flex items-center gap-3 rounded-[8px] border border-gold/40 bg-bg px-4 py-3 font-mono text-sm text-text-muted md:text-base">
               <img 
-                src="/src/assets/Python-logo.webp" 
+                src={python} 
                 alt="python" 
                 className="w-10 h-auto shrink-0" 
               /> 
@@ -234,7 +234,6 @@ function EventsPage() {
             </div>
           </div>
 
-          {/* CLOSING NOTE */}
           <div className="mt-6 rounded-[10px] border border-white/70 bg-bg-panel px-6 py-5">
             <p className="mb-2 font-display text-base font-bold text-white md:text-lg">💡 Keep Learning Beyond the Session</p>
             <p className="font-mono text-sm text-text-muted md:text-base">
@@ -247,45 +246,85 @@ function EventsPage() {
 
         <hr className="border-t border-white w-full"/>
 
-        {/* MAIN SHOW */}
         <section>
           <SectionHeading label="MAIN SHOW" />
-          <div className="flex flex-col items-center justify-center min-h-[140px] rounded-[10px] border border-white/70 bg-bg-panel px-6 py-3  md:min-h-[170px] gap-3">
+          <div className="flex flex-col items-center justify-center min-h-[140px] rounded-[10px] border border-white/70 bg-bg-panel px-6 py-6 md:min-h-[170px] gap-4">
             <p className="font-display text-lg font-bold tracking-[0.15em] text-white md:text-2xl">
               GUEST STAR
             </p>
-            <img 
-              src="/src/assets/garamerica.jpg" 
+            {/* <img 
+              src={garamerica}
               alt="garamerica" 
               className="h-auto max-w-full rounded-md" 
-            />
+            /> */}
+
+            <div className="relative flex h-28 w-28 items-center justify-center md:h-32 md:w-32">
+              <div
+                className="absolute inset-0 rounded-full border-2 border-dashed border-gold/40"
+                style={{ animation: 'spin-slow 12s linear infinite' }}
+              />
+              <div
+                className="relative flex h-24 w-24 items-center justify-center rounded-full border-2 border-gold/70 bg-bg md:h-28 md:w-28"
+                style={{ animation: 'guest-glow 2.6s ease-in-out infinite' }}
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="h-14 w-14 text-white/10 md:h-16 md:w-16"
+                >
+                  <path d="M12 12c2.76 0 5-2.46 5-5.5S14.76 1 12 1 7 3.46 7 6.5 9.24 12 12 12Zm0 2c-4.42 0-9 2.24-9 5v3h18v-3c0-2.76-4.58-5-9-5Z" />
+                </svg>
+                <span
+                  className="absolute font-display text-3xl font-bold text-gold md:text-4xl"
+                  style={{ animation: 'guest-flicker 3.5s ease-in-out infinite' }}
+                >
+                  ?
+                </span>
+              </div>
+            </div>
+
+            <span className="rounded-full border border-gold/50 bg-bg px-3 py-1 font-mono text-[11px] tracking-[0.2em] text-gold md:text-xs">
+              TO BE ANNOUNCED
+            </span>
           </div>
 
-          <div className="mt-5 grid grid-cols-2 gap-4 md:gap-5">
-            <div className="flex aspect-square flex-col items-center justify-between rounded-[10px] border border-white/70 bg-bg-panel px-4 py-3">
-              <p className="font-display text-lg font-bold tracking-[0.15em] text-white md:text-2xl">GAMES</p>
-              <span className="my-auto">
-                <img 
-                  src="/src/assets/game-icon.svg" alt="Game" 
-                  className="w-20 h-auto object-contain md:w-70"
+          <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-stretch md:gap-5">
+            <div className="group flex h-full flex-col items-center rounded-[10px] border border-white/70 bg-bg-panel px-5 py-6 text-center transition-all duration-300 hover:-translate-y-1.5 hover:border-gold hover:shadow-[0_10px_30px_-8px_rgba(224,185,63,0.35)]">
+              <div className="flex h-20 items-center justify-center md:h-24">
+                <img
+                  src={game}
+                  alt="Game"
+                  className="max-h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-110 md:max-h-20"
                 />
-              </span>
+              </div>
+              <p className="mt-4 font-display text-lg font-bold tracking-[0.15em] text-white transition-colors duration-300 group-hover:text-gold md:text-2xl">
+                GAMES
+              </p>
+              <p className="mt-2 font-mono text-xs text-text-muted md:text-sm">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, fuga.
+              </p>
             </div>
-            <div className="flex aspect-square flex-col items-center justify-between rounded-[10px] border border-white/70 bg-bg-panel px-4 py-3">
-              <p className="font-display text-lg font-bold tracking-[0.15em] text-white md:text-2xl">TALK SHOW</p>
-              <span className="my-auto">
-                <img 
-                  src="/src/assets/mic-icon.svg" alt="Mic" 
-                  className="w-20 h-auto object-contain md:w-70"
+
+            <div className="group flex h-full flex-col items-center rounded-[10px] border border-white/70 bg-bg-panel px-5 py-6 text-center transition-all duration-300 hover:-translate-y-1.5 hover:border-gold hover:shadow-[0_10px_30px_-8px_rgba(224,185,63,0.35)]">
+              <div className="flex h-20 items-center justify-center md:h-24">
+                <img
+                  src={mic}
+                  alt="Mic"
+                  className="max-h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-110 md:max-h-20"
                 />
-              </span>
+              </div>
+              <p className="mt-4 font-display text-lg font-bold tracking-[0.15em] text-white transition-colors duration-300 group-hover:text-gold md:text-2xl">
+                TALK SHOW
+              </p>
+              <p className="mt-2 font-mono text-xs text-text-muted md:text-sm">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, accusantium.
+              </p>
             </div>
           </div>
         </section>
 
         <hr className="border-t border-white w-full"/>
 
-        {/* EXPO */}
         <section>
           <SectionHeading label={`EXPO`} />
           <div className="relative">
