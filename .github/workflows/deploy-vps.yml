@@ -18,7 +18,6 @@ on:
 
 env:
   IMAGE_NAME: ghcr.io/himti-binus-university/techno-2026
-  CONTAINER_SERVICE: techno2026
 
 jobs:
   build-and-push:
@@ -80,12 +79,12 @@ jobs:
           if [[ "$TARGET" == "production" ]]; then
             echo "target=production" >> "$GITHUB_OUTPUT"
             echo "image_tag=prod" >> "$GITHUB_OUTPUT"
-            echo "service=${{ env.CONTAINER_SERVICE }}" >> "$GITHUB_OUTPUT"
+            echo "service=techno2026" >> "$GITHUB_OUTPUT"
             echo "profile=prod" >> "$GITHUB_OUTPUT"
           else
             echo "target=development" >> "$GITHUB_OUTPUT"
             echo "image_tag=dev" >> "$GITHUB_OUTPUT"
-            echo "service=${{ env.CONTAINER_SERVICE }}" >> "$GITHUB_OUTPUT"
+            echo "service=techno2026-dev" >> "$GITHUB_OUTPUT"
             echo "profile=dev" >> "$GITHUB_OUTPUT"
           fi
 
