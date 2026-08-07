@@ -342,7 +342,7 @@ function EventsPage() {
                 GAMES
               </p>
               <p className="mt-2 font-mono text-xs text-text-muted md:text-sm">
-                Berbagai games seru selama acara berlangsung, sekaligus kesempatan buat kenal HIMTI lebih dekat. Ada hadiah menarik juga, lho!
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, doloremque?
               </p>
             </div>
 
@@ -358,7 +358,7 @@ function EventsPage() {
                 TALK SHOW
               </p>
               <p className="mt-2 font-mono text-xs text-text-muted md:text-sm">
-                Sesi talkshow interaktif yang membahas topik teknologi terkini, dibawakan oleh pembicara-pembicara berpengalaman.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, doloremque.
               </p>
             </div>
           </div>

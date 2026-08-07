@@ -17,7 +17,6 @@ function HomePage() {
           src={webDesignHimti} alt="Background web himti"
           className="w-full h-full object-cover" 
           />
-          {/* Fade halus di bagian bawah supaya gambar menyatu ke section berikutnya, tidak terlihat terpotong */}
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-bg md:h-64" />
         </div>
 
