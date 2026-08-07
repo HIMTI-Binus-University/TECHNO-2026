@@ -142,11 +142,34 @@ jobs:
           script: |
             set -e
 
-            echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u "${{ secrets.GHCR_USERNAME }}" --password-stdin
+            LOGIN_ATTEMPT=1
+            until printf '%s' "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u "${{ secrets.GHCR_USERNAME }}" --password-stdin; do
+              if [ "$LOGIN_ATTEMPT" -ge 5 ]; then
+                echo "GHCR login failed after $LOGIN_ATTEMPT attempts."
+                exit 1
+              fi
+
+              WAIT_SECONDS=$((LOGIN_ATTEMPT * 10))
+              echo "GHCR login attempt $LOGIN_ATTEMPT failed; retrying in $WAIT_SECONDS seconds."
+              sleep "$WAIT_SECONDS"
+              LOGIN_ATTEMPT=$((LOGIN_ATTEMPT + 1))
+            done
 
             cd /opt/himti-platform
 
-            docker compose --profile "${{ needs.build-and-push.outputs.profile }}" pull "${{ needs.build-and-push.outputs.service }}"
+            PULL_ATTEMPT=1
+            until docker compose --profile "${{ needs.build-and-push.outputs.profile }}" pull "${{ needs.build-and-push.outputs.service }}"; do
+              if [ "$PULL_ATTEMPT" -ge 5 ]; then
+                echo "Image pull failed after $PULL_ATTEMPT attempts."
+                exit 1
+              fi
+
+              WAIT_SECONDS=$((PULL_ATTEMPT * 10))
+              echo "Image pull attempt $PULL_ATTEMPT failed; retrying in $WAIT_SECONDS seconds."
+              sleep "$WAIT_SECONDS"
+              PULL_ATTEMPT=$((PULL_ATTEMPT + 1))
+            done
+
             docker compose --profile "${{ needs.build-and-push.outputs.profile }}" up -d "${{ needs.build-and-push.outputs.service }}"
 
             docker compose restart caddy
