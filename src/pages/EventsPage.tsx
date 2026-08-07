@@ -102,7 +102,47 @@ function EventsPage() {
         <section>
           <SectionHeading label="EVENTS" />
 
-          <div className="min-h-[180px] rounded-[10px] border border-white/70 bg-bg-panel md:min-h-[220px]" />
+          <div className="rounded-[10px] border border-white/70 bg-bg-panel px-6 py-5">
+            <p className="mb-2 font-display text-base font-bold text-white md:text-lg">🌟 About PBP</p>
+            <p className="font-mono text-sm text-text-muted md:text-base">
+              PBP (Pengenalan Bahasa Pemrograman) is one of the event series of{' '}
+              <span className="text-text">TECHNO NOVA 2026: Opportunities, Vision &amp; Advancement</span>{' '}
+              organized by HIMTI BINUS University to welcome School of Computer Science (SOCS) freshmen. Through
+              this program, participants will be introduced to the fundamentals of programming to help them prepare
+              for their academic journey at BINUS University.
+            </p>
+            <br />
+            <p className="mt-4 mb-2 font-display text-sm font-bold text-white md:text-base">📚 Learning Topics</p>
+            <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+              {pbpTopics.map((topic) => (
+                <p key={topic} className="flex items-start gap-2 font-mono text-sm text-text-muted md:text-base">
+                  <span className="text-gold">✅</span>
+                  <span>{topic}</span>
+                </p>
+              ))}
+            </div>
+            <br />
+            <div className="mt-4 flex items-center gap-3 rounded-[8px] border border-gold/40 bg-bg px-4 py-3 font-mono text-sm text-text-muted md:text-base">
+              <img
+                src={python}
+                alt="python"
+                className="w-10 h-auto shrink-0"
+              />
+
+              <p>
+                <span className="text-gold">Special for Senayan Region:</span> The learning materials will be
+                delivered using Python as an introduction to programming fundamentals. 🐍
+              </p>
+            </div>
+            <br />
+            <p className="mt-4 mb-2 font-display text-sm font-bold text-white md:text-base">
+              💡 Keep Learning Beyond the Session
+            </p>
+            <p className="font-mono text-sm text-text-muted md:text-base">
+              PBP is designed to introduce the fundamentals of programming. Participants are encouraged to continue
+              exploring and practicing independently to further develop their coding skills.
+            </p>
+          </div>
 
           <div className="mt-5 rounded-[10px] border border-white/70 bg-bg-panel px-6 py-5">
             <p className="mb-2 font-display text-base font-bold text-white md:text-lg">🚀 Hello, SOCS Freshmen! ✨</p>
@@ -263,6 +303,7 @@ function EventsPage() {
                 className="absolute inset-0 rounded-full border-2 border-dashed border-gold/40"
                 style={{ animation: 'spin-slow 12s linear infinite' }}
               />
+
               <div
                 className="relative flex h-24 w-24 items-center justify-center rounded-full border-2 border-gold/70 bg-bg md:h-28 md:w-28"
                 style={{ animation: 'guest-glow 2.6s ease-in-out infinite' }}
@@ -301,7 +342,7 @@ function EventsPage() {
                 GAMES
               </p>
               <p className="mt-2 font-mono text-xs text-text-muted md:text-sm">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, fuga.
+                Berbagai games seru selama acara berlangsung, sekaligus kesempatan buat kenal HIMTI lebih dekat. Ada hadiah menarik juga, lho!
               </p>
             </div>
 
@@ -317,7 +358,7 @@ function EventsPage() {
                 TALK SHOW
               </p>
               <p className="mt-2 font-mono text-xs text-text-muted md:text-sm">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, accusantium.
+                Sesi talkshow interaktif yang membahas topik teknologi terkini, dibawakan oleh pembicara-pembicara berpengalaman.
               </p>
             </div>
           </div>

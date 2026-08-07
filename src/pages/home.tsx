@@ -12,11 +12,13 @@ function HomePage() {
   return (
     <main className="flex-1">
       <section className="relative flex min-h-[600px] flex-col items-center justify-end px-0 py-0 md:min-h-[700px]">
-        <div className="absolute inset-0 w-full h-full">
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
           <img 
           src={webDesignHimti} alt="Background web himti"
           className="w-full h-full object-cover" 
           />
+          {/* Fade halus di bagian bawah supaya gambar menyatu ke section berikutnya, tidak terlihat terpotong */}
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-bg md:h-64" />
         </div>
 
         <div className="relative z-10 mb-6 max-w-xl rounded-full border border-cyan-400/40 bg-bg-deep/40 px-8 py-4 text-center backdrop-blur-md shadow-[0_0_35px_rgba(45,212,191,0.25)]">
@@ -128,10 +130,12 @@ function HomePage() {
             ].map(({ title, description }) => (
               <div
                 key={title}
-                className="flex flex-col items-center gap-4 rounded-lg border border-line-soft/70 bg-bg-panel px-6 py-8"
+                className="group flex flex-col items-center gap-4 rounded-lg border border-line-soft/70 bg-bg-panel px-6 py-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-gold hover:shadow-[0_10px_30px_-8px_rgba(224,185,63,0.35)]"
               >
                 <div className="flex h-24 w-24 items-center justify-center">
-                  <img src={boxIcon} alt={title} className="h-24 w-24 object-contain" />
+                  <img 
+                    src={boxIcon} alt={title} 
+                    className="h-24 w-24 object-contain transition-transform duration-300 group-hover:scale-110" />
                 </div>
                 <p className="font-display text-base font-bold text-white">{title}</p>
                 <p className="text-center text-sm text-text-muted">{description}</p>
