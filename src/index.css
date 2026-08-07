@@ -77,3 +77,26 @@ button {
     transform: translateY(0);
   }
 }
+
+@keyframes guest-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px -4px rgb(224 185 63 / 0.45);
+  }
+  50% {
+    box-shadow: 0 0 34px 2px rgb(224 185 63 / 0.75);
+  }
+}
+
+@keyframes guest-flicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.4; }
+  94% { opacity: 1; }
+  96% { opacity: 0.6; }
+  97% { opacity: 1; }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
