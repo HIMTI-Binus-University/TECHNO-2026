@@ -12,11 +12,12 @@ function HomePage() {
   return (
     <main className="flex-1">
       <section className="relative flex min-h-[600px] flex-col items-center justify-end px-0 py-0 md:min-h-[700px]">
-        <div className="absolute inset-0 w-full h-full">
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
           <img 
           src={webDesignHimti} alt="Background web himti"
           className="w-full h-full object-cover" 
           />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-bg md:h-64" />
         </div>
 
         <div className="relative z-10 mb-6 max-w-xl rounded-full border border-cyan-400/40 bg-bg-deep/40 px-8 py-4 text-center backdrop-blur-md shadow-[0_0_35px_rgba(45,212,191,0.25)]">
