@@ -175,12 +175,11 @@ function HomePage() {
             />
           </div>
 
-          <div className="grid grid-cols-2 gap-6">
+          <div className="flex justify-center">
             {[
-              { name: 'CBN', logo: null },
               { name: 'PT. Dewaweb', logo: dewawebLogo }
             ].map((sponsor) => (
-              <div key={sponsor.name} className="flex flex-col items-center gap-3">
+              <div key={sponsor.name} className="flex w-full max-w-[488px] flex-col items-center gap-3">
                 <div className="flex aspect-square w-full items-center justify-center rounded-full border border-line-soft bg-bg-panel">
                   {sponsor.logo ? (
                     <img src={sponsor.logo} alt={sponsor.name} className="h-3/4 w-3/4 object-contain -translate-y-2" />
