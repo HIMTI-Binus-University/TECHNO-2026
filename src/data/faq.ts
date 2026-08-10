@@ -50,7 +50,7 @@ export const faqItems: FaqItem[] = [
     answer:
       'HIMTI KIT is a starter kit which consists of a summary of material from several courses that support SoCS students studies over the next few semesters.',
     question2: '2. What conditions are needed to access HIMTI KIT?',
-    answer2: 'To get access to the HIMTI KIT, BINUSIAN SoCS 2029 is registered to be present at the TECHNO 2026 main event from the start to the end of the event via the attendance form announced by the committee during the event. When HIMTI KIT can be accessed and how to access HIMTI KIT will be informed via the TECHNO 2026 participant LINE group. So that after the main event ends, it is hoped that participants will not leave the group first.',
+    answer2: 'To get access to the HIMTI KIT, BINUSIAN SoCS 2030 is registered to be present at the TECHNO 2026 main event from the start to the end of the event via the attendance form announced by the committee during the event. When HIMTI KIT can be accessed and how to access HIMTI KIT will be informed via the TECHNO 2026 participant LINE group. So that after the main event ends, it is hoped that participants will not leave the group first.',
     question3: '',
     answer3: ''
   },
