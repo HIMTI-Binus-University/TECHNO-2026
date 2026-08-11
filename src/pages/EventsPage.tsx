@@ -16,14 +16,52 @@ interface PbpScheduleGroup {
 
 const pbpSchedule: PbpScheduleGroup[] = [
   {
-    id: 'general',
-    title: 'Kemanggisan, Alam Sutera, Semarang, Bandung, Malang, Medan & Bekasi',
+    id: 'kemanggisan',
+    title: 'Kemanggisan',
     date: '31 Agustus 2026 – 2 September 2026',
-    formats: [
-      { label: 'Hybrid', icon: '🔁', regions: 'Kemanggisan, Alam Sutera, Semarang' },
-      { label: 'Onsite', icon: '🏫', regions: 'Bandung' },
-      { label: 'Online', icon: '💻', regions: 'Malang, Medan & Bekasi' },
-    ],
+    formats: [{ label: 'Hybrid', icon: '🔁', regions: 'Kemanggisan' }],
+    language: 'Basic C',
+  },
+  {
+    id: 'alam-sutera',
+    title: 'Alam Sutera',
+    date: '31 Agustus 2026 – 2 September 2026',
+    formats: [{ label: 'Hybrid', icon: '🔁', regions: 'Alam Sutera' }],
+    language: 'Basic C',
+  },
+  {
+    id: 'semarang',
+    title: 'Semarang',
+    date: '31 Agustus 2026 – 2 September 2026',
+    formats: [{ label: 'Hybrid', icon: '🔁', regions: 'Semarang' }],
+    language: 'Basic C',
+  },
+  {
+    id: 'bandung',
+    title: 'Bandung',
+    date: '31 Agustus 2026 – 2 September 2026',
+    formats: [{ label: 'Onsite', icon: '🏫', regions: 'Bandung' }],
+    language: 'Basic C',
+  },
+  {
+    id: 'malang',
+    title: 'Malang',
+    date: '31 Agustus 2026 – 2 September 2026',
+    formats: [{ label: 'Online', icon: '💻', regions: 'Malang' }],
+    language: 'Basic C',
+  },
+  {
+    id: 'medan',
+    title: 'Medan',
+    date: '31 Agustus 2026 – 2 September 2026',
+    formats: [{ label: 'Online', icon: '💻', regions: 'Medan' }],
+    language: 'Basic C',
+  },
+  {
+    id: 'bekasi',
+    title: 'Bekasi',
+    date: '31 Agustus 2026 – 2 September 2026',
+    formats: [{ label: 'Online', icon: '💻', regions: 'Bekasi' }],
     language: 'Basic C',
   },
   {
