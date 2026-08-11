@@ -33,7 +33,12 @@ body {
   @apply bg-bg text-text font-mono min-h-svh antialiased;
   background-image:
     radial-gradient(circle at 12% 0%, rgb(224 185 63 / 0.06), transparent 40%),
-    radial-gradient(circle at 88% 15%, rgb(78 140 160 / 0.08), transparent 45%);
+    radial-gradient(circle at 88% 15%, rgb(78 140 160 / 0.08), transparent 45%),
+    radial-gradient(circle at 15% 25%, rgb(124 58 199 / 0.20), transparent 50%),
+    radial-gradient(circle at 90% 60%, rgb(94 41 176 / 0.22), transparent 55%),
+    radial-gradient(circle at 30% 95%, rgb(140 70 220 / 0.18), transparent 50%),
+    linear-gradient(165deg, rgb(88 40 160 / 0.28) 0%, transparent 30%, transparent 70%, rgb(76 29 149 / 0.28) 100%);
+  background-attachment: fixed;
 }
 
 #root {
@@ -71,4 +76,27 @@ button {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes guest-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px -4px rgb(224 185 63 / 0.45);
+  }
+  50% {
+    box-shadow: 0 0 34px 2px rgb(224 185 63 / 0.75);
+  }
+}
+
+@keyframes guest-flicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.4; }
+  94% { opacity: 1; }
+  96% { opacity: 0.6; }
+  97% { opacity: 1; }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }

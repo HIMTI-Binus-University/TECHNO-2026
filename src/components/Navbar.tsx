@@ -15,25 +15,31 @@ const linkBase =
 const linkActive = 'text-gold opacity-100 after:right-0'
 
 const registerClasses =
-  'rounded-md border-[1.5px] border-gold bg-bg-deep px-5 py-2 text-center text-[13px] font-bold tracking-[0.1em] text-gold no-underline transition-all hover:bg-gold hover:text-bg-deep hover:shadow-[0_0_18px_rgba(224,185,63,0.45)]'
+  'rounded-md border-[1.5px] border-gold bg-gold px-5 py-2 text-center text-[13px] font-bold tracking-[0.1em] text-bg-deep no-underline transition-all hover:bg-gold hover:text-bg-deep hover:shadow-[0_0_18px_rgba(224,185,63,0.45)]'
 
 function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-40 bg-gradient-to-b from-bg from-70% to-transparent px-5 pt-5 pb-2 md:px-16">
+    <header className="sticky top-0 z-40 bg-bg-deep/70 backdrop-blur-md px-5 py-3 md:px-16">
       <div className="relative mx-auto flex max-w-[1200px] items-center justify-between gap-6 md:grid md:grid-cols-[1fr_auto_1fr]">
-        <NavLink to="/" className="flex shrink-0 items-center no-underline md:justify-self-start" onClick={() => setOpen(false)}>
+        <NavLink
+          to="/"
+          className="flex shrink-0 items-center no-underline md:justify-self-start"
+          onClick={() => setOpen(false)}
+        >
           <img src={technoLogo} alt="Techno 2026" className="h-[46px] w-auto" />
         </NavLink>
 
-        {/* Desktop nav: centered via the 1fr/auto/1fr grid */}
+        {/* Desktop nav */}
         <nav className="hidden items-center gap-8 md:flex md:justify-self-center lg:gap-10">
           {NAV_LINKS.map((link) => (
             <NavLink
               key={link.to}
               to={link.to}
-              className={({ isActive }) => `${linkBase} ${isActive ? linkActive : ''}`}
+              className={({ isActive }) =>
+                `${linkBase} ${isActive ? linkActive : ''}`
+              }
             >
               {link.label}
             </NavLink>
@@ -41,9 +47,14 @@ function Navbar() {
         </nav>
 
         <div className="flex items-center gap-3 md:justify-self-end">
-          <NavLink to="/register" className={`hidden md:inline-block ${registerClasses}`}>
+          <a
+            href="https://link.himtibinus.or.id/EarlyBirdTECHNO2026"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`hidden md:inline-block ${registerClasses}`}
+          >
             REGISTER
-          </NavLink>
+          </a>
 
           <button
             type="button"
@@ -73,9 +84,16 @@ function Navbar() {
                 {link.label}
               </NavLink>
             ))}
-            <NavLink to="/register" className={`mt-3 ${registerClasses}`} onClick={() => setOpen(false)}>
+
+            <a
+              href="https://link.himtibinus.or.id/EarlyBirdTECHNO2026"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`mt-3 ${registerClasses}`}
+              onClick={() => setOpen(false)}
+            >
               REGISTER
-            </NavLink>
+            </a>
           </nav>
         )}
       </div>
