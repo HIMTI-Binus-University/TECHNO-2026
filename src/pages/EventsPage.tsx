@@ -380,7 +380,7 @@ function EventsPage() {
                 GAMES
               </p>
               <p className="mt-2 font-mono text-xs text-text-muted md:text-sm">
-                A talkshow for SoCS students to understand further about Cyber, which is now popular in many fields.
+                Throughout the event, there will be several games you can win to further know about HIMTI and strengthen your relations with friends. And psst... there are prizes too you know!
               </p>
             </div>
 
@@ -396,7 +396,7 @@ function EventsPage() {
                 TALK SHOW
               </p>
               <p className="mt-2 font-mono text-xs text-text-muted md:text-sm">
-                Throughout the event, there will be several games you can win to further know about HIMTI and strengthen your relations with friends. And psst... there are prizes too you know!
+                A talkshow for SoCS students to understand further about Cyber, which is now popular in many fields.
               </p>
             </div>
           </div>
