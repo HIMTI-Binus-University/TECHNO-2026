@@ -5,7 +5,6 @@ import bks from "../assets/binus-bekasi.jpeg"
 import bdg from "../assets/binus-bandung.jpeg"
 import mdn from "../assets/binus-medan.webp"
 import mlg from "../assets/binus-malang.jpeg"
-import sny from "../assets/binus-senayan.jpg"
 
 export interface ExpoSlide {
   id: string
@@ -57,10 +56,5 @@ export const expoSlides: ExpoSlide[] = [
     description: '14 Agustus',
     image: mlg,
   },
-  {
-    id: '8',
-    title: 'Senayan',
-    description: '21 Agustus',
-    image: sny,
-  },
+
 ]

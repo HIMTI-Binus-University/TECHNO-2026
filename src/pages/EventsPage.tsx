@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { expoSlides } from '../data/events'
 import stripe from "../assets/stripe.svg"
 import diamond from "../assets/diamond-shape.svg"
-import python from "../assets/Python-logo.webp"
 import game from "../assets/game-icon.svg"
 import mic from "../assets/mic-icon.svg"
 
@@ -64,13 +63,7 @@ const pbpSchedule: PbpScheduleGroup[] = [
     formats: [{ label: 'Online', icon: '💻', regions: 'Bekasi' }],
     language: 'Basic C',
   },
-  {
-    id: 'senayan',
-    title: 'Senayan',
-    date: '31 Agustus & 2 September 2026',
-    formats: [{ label: 'Online', icon: '💻', regions: 'Senayan' }],
-    language: 'Python',
-  },
+
 ]
 
 const pbpTopics = [
@@ -160,18 +153,7 @@ function EventsPage() {
               ))}
             </div>
             <br />
-            <div className="mt-4 flex items-center gap-3 rounded-[8px] border border-gold/40 bg-bg px-4 py-3 font-mono text-sm text-text-muted md:text-base">
-              <img
-                src={python}
-                alt="python"
-                className="w-10 h-auto shrink-0"
-              />
 
-              <p>
-                <span className="text-gold">Special for Senayan Region:</span> The learning materials will be
-                delivered using Python as an introduction to programming fundamentals. 🐍
-              </p>
-            </div>
             <br />
             <p className="mt-4 mb-2 font-display text-sm font-bold text-white md:text-base">
               💡 Keep Learning Beyond the Session
@@ -274,7 +256,7 @@ function EventsPage() {
             <p className="mb-2 font-display text-base font-bold text-white md:text-lg">📍 Venue Information</p>
             <ul className="flex flex-col gap-1.5 font-mono text-sm text-text-muted md:text-base">
               <li>🔁 <span className="text-text">Kemanggisan, Alam Sutera, and Semarang:</span> Hybrid</li>
-              <li>💻 <span className="text-text">Senayan, Malang, Bekasi & Medan:</span> Online</li>
+              <li>💻 <span className="text-text">Malang, Bekasi & Medan:</span> Online</li>
               <li>🏫 <span className="text-text">Bandung:</span> Onsite</li>
             </ul>
           </div>
@@ -299,17 +281,7 @@ function EventsPage() {
                 </p>
               ))}
             </div>
-            <div className="mt-4 flex items-center gap-3 rounded-[8px] border border-gold/40 bg-bg px-4 py-3 font-mono text-sm text-text-muted md:text-base">
-              <img 
-                src={python} 
-                alt="python" 
-                className="w-10 h-auto shrink-0" 
-              /> 
-              <p>
-                <span className="text-gold">Special for Senayan Region:</span> The learning materials will be
-                delivered using Python as an introduction to programming fundamentals.
-              </p>
-            </div>
+
           </div>
 
           <div className="mt-6 rounded-[10px] border border-white/70 bg-bg-panel px-6 py-5">
