@@ -298,47 +298,6 @@ function EventsPage() {
 
         <section>
           <SectionHeading label="MAIN SHOW" />
-          <div className="flex flex-col items-center justify-center min-h-[140px] rounded-[10px] border border-white/70 bg-bg-panel px-6 py-6 md:min-h-[170px] gap-4">
-            <p className="font-display text-lg font-bold tracking-[0.15em] text-white md:text-2xl">
-              GUEST STAR
-            </p>
-            {/* <img 
-              src={garamerica}
-              alt="garamerica" 
-              className="h-auto max-w-full rounded-md" 
-            /> */}
-
-            <div className="relative flex h-28 w-28 items-center justify-center md:h-32 md:w-32">
-              <div
-                className="absolute inset-0 rounded-full border-2 border-dashed border-gold/40"
-                style={{ animation: 'spin-slow 12s linear infinite' }}
-              />
-
-              <div
-                className="relative flex h-24 w-24 items-center justify-center rounded-full border-2 border-gold/70 bg-bg md:h-28 md:w-28"
-                style={{ animation: 'guest-glow 2.6s ease-in-out infinite' }}
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="h-14 w-14 text-white/10 md:h-16 md:w-16"
-                >
-                  <path d="M12 12c2.76 0 5-2.46 5-5.5S14.76 1 12 1 7 3.46 7 6.5 9.24 12 12 12Zm0 2c-4.42 0-9 2.24-9 5v3h18v-3c0-2.76-4.58-5-9-5Z" />
-                </svg>
-                <span
-                  className="absolute font-display text-3xl font-bold text-gold md:text-4xl"
-                  style={{ animation: 'guest-flicker 3.5s ease-in-out infinite' }}
-                >
-                  ?
-                </span>
-              </div>
-            </div>
-
-            <span className="rounded-full border border-gold/50 bg-bg px-3 py-1 font-mono text-[11px] tracking-[0.2em] text-gold md:text-xs">
-              TO BE ANNOUNCED
-            </span>
-          </div>
-
           <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-stretch md:gap-5">
             <div className="group flex h-full flex-col items-center rounded-[10px] border border-white/70 bg-bg-panel px-5 py-6 text-center transition-all duration-300 hover:-translate-y-1.5 hover:border-gold hover:shadow-[0_10px_30px_-8px_rgba(224,185,63,0.35)]">
               <div className="flex h-20 items-center justify-center md:h-24">
